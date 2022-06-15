@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+html {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+/* ---------------------- common ---------------------- */
+
+#wrap {
+    width: 1020px;
+    margin: auto;
+    /* border: 3px solid black; */
+}
+
+#header {
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+    margin: 3px;
+}
+
+#navbar a:hover {
+    color: rgb(191, 160, 122);
+}
+
+#content {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+input:focus {
+    outline: none;
+}
+
+/* ---------------------- index ----------------------- */
+
+#category {
+    height: 35px;
+}
+
+#search-term {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#search-btn {
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+
+.imgbox {
+    box-sizing: border-box;
+    max-width: 30%;
+    margin-top: 30px;
+}
+
+.imgbox img {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+/* --------------------- product ---------------------- */
+
+#display-product {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.column img {
+    width: 100%;
+}
+
+.product-summary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.product-summary p {
+    width: 50%;
+    height: 5px;
+    text-align: right;
+    color:rgb(150, 150, 150);
+    font-size: 15px;
+}
+
+.comment-write {
+    width: 75%;
+    height: 35px;
+}
+
+.comment-submit {
+    width: 20%;
+    height: 40px;
+    background-color: rgb(59, 75, 89);
+    border: none;
+    color: white;
+}
+
+.comment {
+    border-top: 1px solid rgb(200, 200, 200);
+    padding: 20px;
+}
+
+/* ---------------------- signup ---------------------- */
+
+.reg-content {
+    width: 300px;
+    font-size: 15px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.reg-content input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+input.reg-submit {
+    width: 205px;
+    background-color: rgb(59, 75, 89);
+    border: none;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input.reg-cancel {
+    width: 205px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+}

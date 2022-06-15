@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Shop</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- Header -->
+            <header id="header">
+                <h1 class="title">Hello!</h1>
+                <div>
+                    <nav id="navbar">
+                        <a href="/">메인페이지</a>
+                        <a href="/login.html">로그인</a>
+                        <a href="/signup.html">회원가입</a>
+                    </nav>
+                </div>
+            </header>
+            <hr>
+
+            <!-- Content -->
+            <div id="content">
+                <h2 id="product-heading">Products &gt; <%= category %> &gt; <%= searchTerm %></h2>
+                <div>
+                    <form method="get" action="" id="filter">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option selected>All</option>
+                            <option>Top</option>
+                            <option>Bottom</option>
+                            <option>Accessory</option>
+                        </select>
+                        <input id="search-term" name="search" type="text" placeholder="Search">
+                        <button id="search-btn"><span class="material-symbols-outlined">search</span></button>
+                    </form>
+                </div>
+
+                <div id="items">
+                    <% for (var i = 0; i < items.length; i++) { %>
+                        <div class="imgbox">
+                            <a href="/product/<%= items[i]['product_id'] %>"><img src="<%= items[i]['product_image'] %>"></a>
+                            <p><%= items[i]['product_title'] %></p>
+                        </div>
+                    <% } %>
+                </div>
+
+                <h2>About</h2>
+                <div>
+                    <p>
+                        Etiam non mollis leo, vel efficitur enim. Sed convallis semper libero quis blandit. 
+                        Phasellus at ante accumsan, condimentum augue quis, sagittis arcu. 
+                        Phasellus lacinia augue sed tellus faucibus, vel interdum risus faucibus. 
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+                        Vestibulum sit amet pretium ipsum.
+                    </p>
+                    <p>
+                        Etiam sed sem vel sapien mattis pellentesque. 
+                        Integer id ipsum hendrerit augue varius vulputate et quis eros. 
+                        Maecenas a aliquam sem. Aenean tincidunt vulputate sem non vulputate. 
+                        Mauris eget orci elit. Fusce non erat vitae sapien posuere rutrum. 
+                        Etiam eu libero vehicula, malesuada massa eget, blandit justo.
+                    </p>
+                    <p>
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                        Integer aliquam turpis sapien, sit amet hendrerit lectus pellentesque quis. 
+                        Vestibulum posuere auctor tellus. Aliquam id fringilla est. Fusce id lorem sit amet mi sagittis varius. 
+                        Phasellus vel est in felis egestas rutrum. Maecenas dolor tortor, suscipit at dapibus a, vestibulum quis metus. 
+                        Mauris lorem ex, luctus a est in, cursus convallis nunc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

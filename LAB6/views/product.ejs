@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%= productTitle %></title>
+        <link rel="stylesheet" type="text/css" href="../main.css">
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- Header -->
+            <header id="header">
+                <h1 class="title">Hello!</h1>
+                <div>
+                    <nav id="navbar">
+                        <a href="/">메인페이지</a>
+                        <a href="/login.html">로그인</a>
+                        <a href="/signup.html">회원가입</a>
+                    </nav>
+                </div>
+            </header>
+            <hr>
+
+            <!-- Content -->
+            <div id="content">
+                <p>Products &gt; <a href="/?category=<%= productCategory %>&search=" style="color:gray"><%= productCategory %></a></p>
+                <div id="display-product">
+                    <div class="column">
+                        <img src="../<%= productImage %>">
+                    </div>
+                    <div class="column" style="border-top: 2px solid black">
+                        <h2><%= productTitle %></h2>
+                        <h3><%= productPrice %> 원</h3>
+                        <div class="product-summary">
+                            <p>Product ID</p><p><%= productId %></p>
+                            <p>Product Title</p><p><%= productTitle %></p>
+                            <p>Product Price</p><p><%= productPrice %></p>
+                            <p>Product Category</p><p><%= productCategory %></p>
+                            <p>Product Image</p><p><%= productImage %></p>
+                        </div>
+                        <div style="margin-bottom: 20px; margin-top: 20px">
+                            <form action="/product/<%= productId %>" method="post">
+                                <input class="comment-write" type="text" name="comment" placeholder="Comment">
+                                <button class="comment-submit">리뷰 작성</button>
+                            </form>
+                        </div>
+                        <div id="comment-area">
+                            <% for (var i = commentList.length - 1; i >= 0; i--) { %>
+                                <div class="comment"><%= commentList[i] %></div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- Header -->
+            <header id="header">
+                <h1>Log in</h1>
+                <div>
+                    <nav id="navbar">
+                        <a href="../">메인페이지</a>
+                        <a href="login.html">로그인</a>
+                        <a href="signup.html">회원가입</a>
+                    </nav>
+                </div>
+            </header>
+            <hr>
+    
+            <!-- Content -->
+            <div id="content">
+                <form method="post" action="login.html">
+
+                    <div class="reg-content">
+                        <p>이메일</p>
+                        <input type="email" name="email" autofocus required>
+    
+                        <p>비밀번호</p>
+                        <input type="password" name="password" required>
+                    </div>
+    
+                    <div class="reg-content">
+                        <input class="reg-submit" type="submit" value="로그인">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
